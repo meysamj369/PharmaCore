@@ -1,0 +1,37 @@
+﻿@model PharmaCore.Areas.Admin.Models.LoginViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <form asp-action="Login" method="post">
+            <div>
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" type="text" placeholder="Enter your username" required />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" type="password" placeholder="Enter your password" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div>
+                <input asp-for="RememberMe" type="checkbox" />
+                <label asp-for="RememberMe">Remember Me</label>
+            </div>
+
+            <div>
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
